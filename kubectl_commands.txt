@@ -1,0 +1,5 @@
+kubectl apply -f Deployment.yml
+kubectl apply -f Service.yml
+kubectl get svc
+minikube service reddit-clone-service --url
+kubectl port-forward svc/reddit-clone-service 3000:3000 --address 0.0.0.0 &
